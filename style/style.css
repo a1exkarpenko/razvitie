@@ -4134,7 +4134,7 @@ img {
   }
 
   .twodocs__img {
-    margin: 0 0 7px 0;
+    margin: 0 0 7px 0 !important;
   }
 
   .twodocs__img.tds-1 {
