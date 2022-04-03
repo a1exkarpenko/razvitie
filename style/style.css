@@ -987,11 +987,7 @@ img {
 }
 
 .why__title span {
-  background: -webkit-gradient(linear, left top, left bottom, from(#FFDA58), to(#B68300));
-  background: -o-linear-gradient(#FFDA58, #B68300);
-  background: linear-gradient(#FFDA58, #B68300);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #d6aa21;
 }
 
 .why__list {
