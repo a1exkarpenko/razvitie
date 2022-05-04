@@ -1,19 +1,31 @@
 function callInit() {
     const buttons = document.querySelectorAll('[data-call]')
+    const headerButton = document.querySelector('[data-call-header]')
+    const indiSection = document.querySelector('section.indi')
     const body = document.querySelector('body')
     const popup = document.querySelector('.popup')
     const popupClose = document.querySelector('.popup__close')
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            popup.classList.remove('popup-hidden')
-            body.classList.add('body-lock')
-        })
-    })
-
-    popupClose.addEventListener('click', () => {
+    const openPopup = () => {
+        popup.classList.remove('popup-hidden')
+        body.classList.add('body-lock')
+    }
+    const closePopup = () => {
         popup.classList.add('popup-hidden')
         body.classList.remove('body-lock')
+    }
+
+    buttons.forEach(button => {
+        button.addEventListener('click', openPopup)
+    })
+
+    popupClose.addEventListener('click', closePopup)
+
+    headerButton.addEventListener('click', () => {
+        if (window.innerWidth <= 1180) {
+            return openPopup()
+        }
+        indiSection.scrollIntoView({behavior: 'smooth'})
     })
 }
 function dropListInit() {
@@ -400,7 +412,12 @@ function rangeSlidersInit() {
         body.classList.remove('body-lock')
         scheduleSection.classList.add('schedule-closed')
     })
+
     createPaymentScheduleInfo()
+    
+    lineSliderHandler(sumSliderMonthly, sumSliderLineMonthly, 1_000_000)
+    lineSliderHandler(monthSlider, monthSliderLine, 120)
+    lineSliderHandler(sumSlider, sumSliderLine, 100_000_000)
 }
 document.addEventListener('DOMContentLoaded', () => {
     dropListInit()

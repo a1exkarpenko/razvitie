@@ -799,6 +799,7 @@ img {
   border-radius: 4px;
   max-width: 395px;
   max-height: 294px;
+  cursor: pointer;
 }
 
 .objects__pic img {
@@ -806,6 +807,19 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.objects__pic:hover > p {
+  background-color: rgba(182, 131, 0, 0.75);
+}
+
+.objects__pic:hover > p::before {
+  border-radius: 0;
+  border: 1px solid transparent;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .objects__pic-text {
@@ -829,6 +843,9 @@ img {
   font-size: 36px;
   line-height: 44.24px;
   text-align: center;
+  -webkit-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .objects__pic-text::before {
@@ -840,6 +857,9 @@ img {
   left: 13px;
   width: calc(100% - 26px);
   height: calc(100% - 26px);
+  -webkit-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
 }
 
 .objects-mobile {
@@ -1462,6 +1482,10 @@ img {
 }
 
 .steps__hexagon {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   color: #000;
   background: -o-linear-gradient(285.7deg, #FFDA58 9.12%, #B68300 110.65%), -o-linear-gradient(285.7deg, #FFDA58 9.12%, #B68300 110.65%), #FFFFFF;
   background: linear-gradient(164.3deg, #FFDA58 9.12%, #B68300 110.65%), linear-gradient(164.3deg, #FFDA58 9.12%, #B68300 110.65%), #FFFFFF;
@@ -1486,6 +1510,18 @@ img {
           clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   position: absolute;
   left: 325px;
+}
+
+.steps__hexagon > p {
+  -webkit-transition: all 0.15s ease;
+  -o-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+.steps__hexagon:hover > p {
+  -webkit-transform: scale(1.15);
+      -ms-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .steps__number {
@@ -2143,6 +2179,10 @@ img {
   max-height: 0;
 }
 
+.faq__gold {
+  color: #B68300;
+}
+
 .slider {
   padding: 65px 0 59px 0;
   position: relative;
@@ -2690,7 +2730,11 @@ img {
   }
 
   .nav__logo-text {
-    display: none;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17.07px;
+    white-space: nowrap;
+    margin-left: 8px;
   }
 
   .nav__logo-image {
@@ -3276,14 +3320,6 @@ img {
 
   .nav {
     margin-bottom: 133px;
-  }
-
-  .nav__logo-text {
-    display: inline-block;
-    font-size: 14px;
-    line-height: 17.07px;
-    white-space: nowrap;
-    margin-left: 8px;
   }
 
   .nav__item:first-child {

@@ -99,6 +99,12 @@
                     <img src="./img/microCheckbox.png" class="micro-checkbox" alt="Галочка">
                     <p class="header__text">Рефенансирование на выгодных условиях</p>
                 </li>
+                <li class="header__item">
+                    <img src="./img/checkbox.png" alt="Галочка">
+                    <img src="./img/miniCheckbox.png" class="mini-checkbox" alt="Галочка">
+                    <img src="./img/microCheckbox.png" class="micro-checkbox" alt="Галочка">
+                    <p class="header__text">Отсрочка платежей</p>
+                </li>
             </ul>
         </div>
         <!-- data -->
@@ -132,7 +138,7 @@
         </div>
         <!-- button -->
         <div class="header__wrapper">
-            <button type="button" class="header__button get-money" data-call>Получить деньги</button>
+            <button type="button" class="header__button get-money" data-call-header>Получить деньги</button>
         </div>
     </div>
 </header>
@@ -168,37 +174,37 @@
         <ul class="cards__list">
             <li class="cards__item">
                 <div class="cards__img">
-                    <img src="./img/card-check.png" alt="Icon">
+                    <img src="./img/card-check.png" alt="95% вероятность одобрения">
                 </div>
                 <p class="cards__title">95%<br>вероятность одобрения</p>
                 <div class="cards__line"></div>
                 <p class="cards__text">Более 100 банков и 300 частных инвесторов готовы рассмотреть вашу заявку прямо сейчас<br>
-                    Быстро и профессионально подберем кредитора под Ваши условия</p>
+                    Быстро и профессионально подберем решение под Ваши условия</p>
                 <button type="button" class="cards__button" data-call>Оставить заявку</button>
             </li>
             <li class="cards__item">
                 <div class="cards__img">
-                    <img src="./img/card-search.png" alt="Icon">
+                    <img src="./img/card-search.png" alt="Берем в работу сложные объекты">
                 </div>
                 <p class="cards__title">Берем в работу<br>сложные объекты</p>
                 <div class="cards__line"></div>
                 <p class="cards__text">Аресты и обременения<br>
-                    Поможем получить деньги и улучшить условия выплат</p>
+                    Поможем получить деньги и улучшить условия выплат, не зависимо от суммы текущей задолжности</p>
                 <button type="button" class="cards__button" data-call>Оставить заявку</button>
             </li>
             <li class="cards__item">
                 <div class="cards__img">
-                    <img src="./img/card-money.png" alt="Icon">
+                    <img src="./img/card-money.png" alt="Максимальная оценка объекта">
                 </div>
                 <p class="cards__title">Максимальная<br>оценка объекта</p>
                 <div class="cards__line"></div>
                 <p class="cards__text">До 90% от рыночной стоимости<br>
-                    бесплатная профессиональная оценка</p>
+                    Бесплатная профессиональная оценка</p>
                 <button type="button" class="cards__button" data-call>Оставить заявку</button>
             </li>
             <li class="cards__item">
                 <div class="cards__img card-clock">
-                    <img src="./img/card-clock.png" alt="Icon">
+                    <img src="./img/card-clock.png" alt="Рассмотрение заявки 30 минут">
                 </div>
                 <p class="cards__title">Рассмотрение заявки 30<br>минут</p>
                 <div class="cards__line"></div>
@@ -207,7 +213,7 @@
             </li>
             <li class="cards__item">
                 <div class="cards__img">
-                    <img src="./img/card-shield.png" alt="Icon">
+                    <img src="./img/card-shield.png" alt="Гарантия ставки на весь срок">
                 </div>
                 <p class="cards__title">Гарантия<br>ставки на весь срок</p>
                 <div class="cards__line"></div>
@@ -217,12 +223,13 @@
             </li>
             <li class="cards__item">
                 <div class="cards__img">
-                    <img src="./img/card-black.png" alt="Icon">
+                    <img src="./img/card-black.png" alt="Законная регистрация сделки">
                 </div>
                 <p class="cards__title">Законная<br>регистрация сделки</p>
                 <div class="cards__line"></div>
-                <p class="cards__text">Нотариус и Росреестр<br>
-                    Официальное оформление и регистрация в полном соответствии с Законом об ипотеке</p>
+                <p class="cards__text">
+                    Ваша недвижимость будет находиться под защитой договора залога в соответствии с Ф3-102 никто
+                    не сможет забрать ее у вас</p>
                 <button type="button" class="cards__button" data-call>Оставить заявку</button>
             </li>
         </ul>
@@ -249,7 +256,7 @@
                         <p class="objects__drop-button">Требования к заемщику</p>
                     </div>
                     <ul class="objects__drop-list">
-                        <li class="objects__drop-item">возраст от 18 до 75 лет</li>
+                        <li class="objects__drop-item">возраст от 18 до 81 года</li>
                         <li class="objects__drop-item">гражданство РФ</li>
                     </ul>
                 </li>
@@ -266,12 +273,12 @@
                 <li class="objects__item">
                     <div class="objects__drop-button-wrap">
                         <img src="./img/drop-arrow.png" alt="arrow">
-                        <p class="objects__drop-button">Этапы получения займа</p>
+                        <p class="objects__drop-button">Этапы получения денег</p>
                     </div>
                     <ul class="objects__drop-list">
                         <li class="objects__drop-item">отправка заявки или звонок в компанию</li>
-                        <li class="objects__drop-item">проверка объекта, поиск кредитора</li>
-                        <li class="objects__drop-item">заключение и регистрация договора в Росреестре получение денег</li>
+                        <li class="objects__drop-item">проверка объекта, выбор условий</li>
+                        <li class="objects__drop-item">Заключение договора - Получение денег</li>
                     </ul>
                 </li>
             </ul>
@@ -281,19 +288,19 @@
             <p class="objects__title objects-mobile">Рассматриваем все объекты недвижимости</p>
             <p class="objects__subtitle objects-mobile">Любое состояние и стадия готовности</p>
             <ul class="objects__pics">
-                <li class="objects__pic">
+                <li class="objects__pic" data-call>
                     <img src="./img/object1.png" alt="Квартиры и комнаты">
                     <p class="objects__pic-text">Квартиры и<br>комнаты</p>
                 </li>
-                <li class="objects__pic">
+                <li class="objects__pic" data-call>
                     <img src="./img/object2.png" alt="Дома и таунхаусы">
                     <p class="objects__pic-text">Дома и<br>таунхаусы</p>
                 </li>
-                <li class="objects__pic">
+                <li class="objects__pic" data-call>
                     <img src="./img/object3.png" alt="Коммерческая недвижимость">
                     <p class="objects__pic-text">Коммерческая<br>недвижимость</p>
                 </li>
-                <li class="objects__pic">
+                <li class="objects__pic" data-call>
                     <img src="./img/object4.png" alt="Земельные участки и дачи">
                     <p class="objects__pic-text">Земельные<br>участки и дачи</p>
                 </li>
@@ -304,7 +311,7 @@
             <section class="use-m">
     <div class="container use-m__container">
         <h2 class="use-m__title">
-            Используйте полученные деньги <span class="use-m__gold">ЛЮБЫЕ</span> цели
+            Используйте полученные деньги на <span class="use-m__gold">ЛЮБЫЕ</span> цели!
         </h2>
         <p class="use-m__subtitle">Если вам нужен аванс - вы получите его сегодня</p>
         <form action="mail.php" method="POST" class="use-m__form">
@@ -349,7 +356,7 @@
                     </li>
                     <li class="why__item">
                         <p class="why__item-title">Быстро</p>
-                        <p class="why__item-text">Получение любой суммы в течение 2 дней наличными или на карту. Используйте деньги на любые нужды без ограничений</p>
+                        <p class="why__item-text">Получение любой суммы в день обращения наличными или на карту. Используйте деньги на любые нужды без ограничений</p>
                     </li>
                 </ul>
             </div>
@@ -358,17 +365,17 @@
 </section>
             <section class="indi">
     <div class="container indi__container">
-        <h2 class="indi__title">Запросите индивидуальные условия займа</h2>
+        <h2 class="indi__title">Запросите индивидуальные условия</h2>
         <p class="indi__subtitle">Получите одобрение уже сегодня</p>
         <div class="indi__sides">
             <ul class="indi__list indi__left">
                 <li class="indi__item">
                     <p class="indi__item-number">1</p>
-                    <p class="indi__item-text">Отправьте запрос в 3 простых шага, получите предложение и положительное решение уже через час</p>
+                    <p class="indi__item-text">Отправьте запрос в 3 простых шага</p>
                 </li>
                 <li class="indi__item">
                     <p class="indi__item-number">2</p>
-                    <p class="indi__item-text">Пришлите нам копии документов и получите проект договора </p>
+                    <p class="indi__item-text">Получите предложение и положительное решение уже через 30 минут</p>
                 </li>
                 <li class="indi__item">
                     <p class="indi__item-number">3</p>
@@ -417,10 +424,12 @@
                             </div>
                             <div class="indi__form-down">
                                 <div class="indi__input-wrap">
-                                    <p class="indi__input-label">Вид займа</p>
+                                    <p class="indi__input-label">Вы являетесь</p>
                                     <select name="type" class="indi__select">
-                                        <option value="Займ в банке">Займ в банке</option>
-                                        <option value="Займ у частного инвестора">Займ у частного инвестора</option>
+                                        <option value="Физическим лицом">Физическим лицом</option>
+                                        <option value="Самозанятый">Самозанятый</option>
+                                        <option value="ИП">ИП</option>
+                                        <option value="ООО">ООО</option>
                                     </select>
                                 </div>
                                 <div class="indi__input-wrap">
@@ -500,7 +509,7 @@
 </section>
             <section class="steps">
     <div class="container steps__container">
-        <h2 class="steps__title">Этапы получения займа</h2>
+        <h2 class="steps__title">Этапы получения денег</h2>
         <p class="steps__subtitle">Узнайте, как получить займ быстро и без проблем</p>
         <ul class="steps__list">
             <li class="steps__item">
@@ -530,7 +539,7 @@
                 <div class="steps__content">
                     <p class="steps__item-title">Одобрение займа</p>
                     <div class="steps__line"></div>
-                    <p class="steps__text">Мы получаем от вас всю необходимую информацию, подбираем кредитора и получаем одобрение на выгодных вам условиях</p>
+                    <p class="steps__text">Мы получаем от вас всю необходимую информацию, подбираем решение и получаем одобрение на выгодных вам условиях</p>
                 </div>
                 <div class="steps__back"></div>
             </li>
@@ -560,7 +569,7 @@
                 <div class="steps__content">
                     <p class="steps__item-title">Получение денег</p>
                     <div class="steps__line"></div>
-                    <p class="steps__text">После регистрации сделки вы получаете деньги в любой удобной вам форме и в полном объеме вместе с графиком платежей</p>
+                    <p class="steps__text">Вы получаете деньги в любой удобной форме и в полном объёме наличными или на карту</p>
                 </div>
                 <div class="steps__back"></div>
             </li>
@@ -584,6 +593,7 @@
                             <input type="range" 
                                 class="calc__range-slider"
                                 id="calc-sum-monthly"
+                                step="1000"
                                 value="4000"
                                 min="4000"
                                 max="1000000">
@@ -596,29 +606,30 @@
                     </div>
                     <div class="calc__range with-m" data-range-block="credit">
                         <p class="calc__range-title">Необходимая сумма, рубли</p>
-                        <p class="calc__range-value" id="current-sum-value">100 000</p>
+                        <p class="calc__range-value" id="current-sum-value">300 000</p>
                         <div class="calc__range-wrap">
                             <input type="range" 
                                 class="calc__range-slider"
                                 id="calc-sum"
-                                value="100000"
+                                step="100000"
+                                value="300000"
                                 min="100000"
                                 max="100000000">
                         <div class="calc__range-line" id="calc-sum-line"></div>
                         </div>
                         <div class="calc__range-values">
                             <p class="calc__range-min">100 тыс. руб.</p>
-                            <p class="calc__range-max">30 млн. руб.</p>
+                            <p class="calc__range-max">100 млн. руб.</p>
                         </div>
                     </div>
                     <div class="calc__range">
                         <p class="calc__range-title">Срок займа, месяцы</p>
-                        <p class="calc__range-value" id="current-month-value">1</p>
+                        <p class="calc__range-value" id="current-month-value">12</p>
                         <div class="calc__range-wrap">
                             <input type="range" 
                                 class="calc__range-slider"
                                 id="calc-month"
-                                value="1"
+                                value="12"
                                 min="1"
                                 max="120">
                             <div class="calc__range-line" id="calc-month-line"></div>
@@ -712,7 +723,7 @@
                         <div class="faq__line"></div>
                     </div>
                 </div>
-                <p class="faq__text">Мы принимаем заявки с 9.00 до 20.00 на 24/7</p>
+                <p class="faq__text">Мы принимаем заявки <span class="faq__gold">круглосуточно</span></p>
             </li>
             <li class="faq__item">
                 <div class="faq__button">
@@ -742,17 +753,7 @@
                         <div class="faq__line"></div>
                     </div>
                 </div>
-                <p class="faq__text">Вы получите одобрение в течении 1 часа и после оформления документов (2-3 дня) через Росриестр перечисляем деньги одним траншем</p>
-            </li>
-            <li class="faq__item">
-                <div class="faq__button">
-                    <p class="faq__title">Смогу ли я продать квартиру в залоге?</p>
-                    <div class="faq__close">
-                        <div class="faq__line"></div>
-                        <div class="faq__line"></div>
-                    </div>
-                </div>
-                <p class="faq__text">Это предусмотрено договором залога, но до момента регистрации купли-продажи, Вы должны будете полностью вернуть займ. Мы решаем подобные вопросы индивидуально — всегда можно снять залог, если у вас есть покупатель на недвижимость. Так же, ваш покупатель может сам внести деньги по вашему договору, как аванс за покупку квартиры.</p>
+                <p class="faq__text">Вы получите одобрение в течении 30 минут и полный денежный расчёт после подачи в Росреестр</p>
             </li>
             <li class="faq__item">
                 <div class="faq__button">
@@ -762,7 +763,7 @@
                         <div class="faq__line"></div>
                     </div>
                 </div>
-                <p class="faq__text">Договором займа предусмотрено продление по соглашению сторон.</p>
+                <p class="faq__text">Договором предусмотрена Пролонгация(продление) на любой срок</p>
             </li>
         </ul>
     </div>
@@ -839,7 +840,7 @@
             <div class="footer__block">
                 <img src="./img/logo.png" class="footer__logo" alt="Легко! Быстро! Доступно!">
                 <p class="footer__gold-title-big">Легко! Быстро! Доступно!</p>
-                <p class="footer__text">Не является кредитной организацией. Оказывает содействие в получении финансовых услуг.</p>
+                <!-- <p class="footer__text">Не является кредитной организацией. Оказывает содействие в получении финансовых услуг.</p> -->
             </div>
             <div class="footer__block">
                 <p class="footer__text middle-text">Любая информация предоставленная на данном сайте носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями статьи 437 ГК РФ. Отправляя сведения через любую электронную форму на этом сайте вы даете согласие на <a href="#">обработку ваших персональных данных</a>
@@ -931,8 +932,8 @@
             <div class="popup__line"></div>
             <div class="popup__line"></div>
         </div>
-        <p class="popup__title">Мы перезвоним Вам в течение минуты</p>
-        <p class="popup__text">Мы ценим Ваш время и готовы помочь найти нужную информуцию</p>
+        <p class="popup__title">Получите одобрение уже сейчас</p>
+        <p class="popup__text">Мы ценим ваше время и готовы помочь найти нужную информацию<br>Наш оператор проконсультирует вас по всем вопросам</p>
         <form action="mail.php" method="POST" class="popup__form">
             <div class="popup__input-wrap">
                 <p class="popup__input-name">Телефон</p>
