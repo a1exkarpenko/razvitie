@@ -335,7 +335,7 @@ function rangeSlidersInit() {
 
     // sum credit slider
     const sumSliderHandler = () => {
-        lineSliderHandler(sumSlider, sumSliderLine, 100_000_000)
+        lineSliderHandler(sumSlider, sumSliderLine, 80_000_000)
         digitSliderHandler(currentSum, sumSlider.value)
         digitSliderHandler(resultSum, sumSlider.value)
         createPaymentScheduleInfo()
