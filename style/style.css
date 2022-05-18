@@ -1746,7 +1746,6 @@ img {
 }
 
 .calc__button {
-  max-width: 269px;
   width: 100%;
   font-size: 20px;
   line-height: 24px;
@@ -1756,6 +1755,13 @@ img {
 
 .calc__button:first-child {
   margin-bottom: 28px;
+}
+
+.calc__offer {
+  font-weight: 500;
+  line-height: 24px;
+  color: #B68300;
+  font-size: 18px;
 }
 
 .calc-d-none {
@@ -2260,6 +2266,7 @@ img {
   margin-bottom: 29px;
 }
 
+.swiper-sum,
 .swiper-text {
   font-weight: 500;
   font-size: 20px;
@@ -2317,6 +2324,12 @@ img {
 
 .swiper-prev {
   border-radius: 5px 0 0 5px;
+}
+
+.swiper-sum {
+  text-align: center;
+  color: #B68300;
+  margin-top: 10px;
 }
 
 .footer {
@@ -3076,6 +3089,10 @@ img {
     margin-bottom: 12px;
   }
 
+  .calc__offer {
+    font-size: 16px;
+  }
+
   .circle {
     padding: 230px 0;
   }
@@ -3174,6 +3191,7 @@ img {
     margin-bottom: 20px;
   }
 
+  .swiper-sum,
   .swiper-text {
     font-size: 18px;
   }
@@ -3708,10 +3726,6 @@ img {
 
   .calc__btns {
     margin-top: 13px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
@@ -3720,7 +3734,6 @@ img {
     padding: 10px 28px;
     font-size: 14px;
     line-height: 17px;
-    width: auto;
   }
 
   .calc__button:first-child {
@@ -3740,6 +3753,12 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .calc__offer {
+    font-size: 15px;
+    margin-top: 20px;
+    width: 100%;
   }
 
   .circle {
@@ -3894,6 +3913,7 @@ img {
     padding-right: 20px;
   }
 
+  .swiper-sum,
   .swiper-text {
     font-size: 18px;
   }
@@ -4657,12 +4677,13 @@ img {
             flex-direction: column;
   }
 
-  .calc__button {
-    width: 187px;
-  }
-
   .calc__button:first-child {
     margin-bottom: 8px;
+  }
+
+  .calc__offer {
+    font-size: 13px;
+    margin-top: 0;
   }
 
   .circle {
@@ -4813,6 +4834,7 @@ img {
     padding: 0;
   }
 
+  .swiper-sum,
   .swiper-text {
     font-size: 14px;
     line-height: 18px;

@@ -430,7 +430,6 @@
                                         <option value="Самозанятый">Самозанятый</option>
                                         <option value="ИП">ИП</option>
                                         <option value="ООО">ООО</option>
-                                        <option value="ПТС">ПТС</option>
                                     </select>
                                 </div>
                                 <div class="indi__input-wrap">
@@ -450,6 +449,7 @@
                                         <option value="Комната">Комната</option>
                                         <option value="Коммерция">Коммерция</option>
                                         <option value="Земельный участок">Земельный участок</option>
+                                        <option value="ПТС">ПТС</option>
                                     </select>
                                 </div>
                                 <div class="indi__input-wrap">
@@ -615,12 +615,12 @@
                                 step="100000"
                                 value="300000"
                                 min="100000"
-                                max="80000000">
+                                max="40000000">
                         <div class="calc__range-line" id="calc-sum-line"></div>
                         </div>
                         <div class="calc__range-values">
                             <p class="calc__range-min">100 тыс. руб.</p>
-                            <p class="calc__range-max">80 млн. руб.</p>
+                            <p class="calc__range-max">40 млн. руб.</p>
                         </div>
                     </div>
                     <div class="calc__range">
@@ -658,8 +658,9 @@
                     </div>
                 </div>
                 <div class="calc__btns">
-                    <button type="button" class="calc__button get-money" id="payment-schedule">График платежей</button>
+                    <!-- <button type="button" class="calc__button get-money" id="payment-schedule">График платежей</button> -->
                     <button type="button" class="calc__button get-money" data-call>Получить деньги</button>
+                    <p class="calc__offer">Индивидуальное предложение для суммы от 40 млн. руб.</p>
                 </div>
             </div>
         </div>
@@ -786,26 +787,32 @@
                         <div class="swiper-name"><p>Дмитрий</p></div>
                         <p class="swiper-text">Пока работал с другой компанией не мог получить средства более двух недель, и у уже начал терять всякую надежду.
                             Когда обнаружил для себя компанию Развитие - это было настоящим открытием!! Бесплатно помогли восстановить частично утерянные документы, и через 2 дня уже был с деньгами.</p>
+                        <p class="swiper-sum">Займ на 650 000 рублей</p>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper-name"><p>Ольга</p></div>
-                        <p class="swiper-text">Пишу после полного рассвета по договору через 1,7 года пользования. Помогли сделать рефенансирование, квартира была в аресте на 700 с лишним т.р. (брала чуть больше на личные нужды). Через пол года решила сделать косметический ремонт, смогла добавить сумму по кредитной линии. Юрист компании и менеджер помогали на протяжении всего времени. Работой довольна.</p>
+                        <p class="swiper-text">Пишу после полного расчёта по договору через 2 года пользования. Помогли сделать рефинансирование, квартира была в аресте на 700 с лишним т.р. (брала чуть больше на личные нужды). Через пол года решила сделать косметический ремонт, смогла добавить сумму по кредитной линии. Юрист компании и менеджер помогали на протяжении всего времени. Работой довольна.</p>
+                        <p class="swiper-sum">Займ на 1 900 000 рублей</p>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper-name"><p>Ирина</p></div>
                         <p class="swiper-text">Сотрудник компании очень доступно и понятно рассказал весь процесс, у меня было много вопросов из за того что ранее никогда не обращалась за подобной услугой, кредитная история была нулевая. Выбрала для себя удобный платёж и график, условия мне подошли, смогла оформить всего за один день!</p>
+                        <p class="swiper-sum">Займ на 800 000 рублей</p>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper-name"><p>Роман</p></div>
                         <p class="swiper-text">Срочно требовались деньги на закрытие ареста из-за МФО, получил 150 тысяч в день обращения под квартиру - звонки от коллекторов прекратились, спасибо!!</p>
+                        <p class="swiper-sum">Займ на 150 000 рублей</p>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper-name"><p>Игорь</p></div>
                         <p class="swiper-text">Партнёр по бизнесу дал контакт Развития - решили вопрос с оборотными средствами моей компании - брали на 3 года, досрочно погасили на 9 месяц!</p>
+                        <p class="swiper-sum">Займ на 7 000 000 рублей</p>
                     </div>
                     <div class="swiper-slide">
                         <div class="swiper-name"><p>Татьяна</p></div>
-                        <p class="swiper-text">В жизни было много разных ситуаций, в которых мне требовались деньги - всегда брала их очень дорого 5-7 % мес под квартиру, сделала рефинансирование у компании Развитие - плачу в одно место в 4 раза меньше!</p>
+                        <p class="swiper-text">В жизни было много разных ситуаций, в которых мне требовались деньги - всегда брала их очень дорого 7-8 % мес под квартиру, сделала рефинансирование у компании Развитие - плачу в одно место в 4 раза меньше!</p>
+                        <p class="swiper-sum">Займ на 2 400 000 рублей</p>
                     </div>
                 </div>
                 <div class="swiper-btns">
@@ -895,7 +902,7 @@
     </div>
 </footer>
     </div>
-    <section class="schedule schedule-closed">
+    <!-- <section class="schedule schedule-closed">
     <div class="schedule__container">
         <div class="schedule__exit">
             <div class="schedule__line"></div>
@@ -909,7 +916,7 @@
                 <li class="schedule__item">Основной долг</li>
                 <li class="schedule__item">Начисленные проценты</li>
             </ul>
-            <div class="schedule__list">
+            <div class="schedule__list"> -->
                 <!-- <ul class="schedule__row">
                     <li class="schedule__item">100 000 000</li>
                     <li class="schedule__item">100 000 000</li>
@@ -917,7 +924,7 @@
                     <li class="schedule__item">100 000 000</li>
                     <li class="schedule__item">100 000 000</li>
                 </ul> -->
-            </div>
+            <!-- </div>
             <ul class="schedule__footer schedule__row">
                 <li class="schedule__item schedule__header-item schedule__big">Итого по кредиту</li>
                 <li class="schedule__item schedule__header-item"></li>
@@ -926,7 +933,7 @@
             </ul>
         </div>
     </div>
-</section>
+</section> -->
     <section class="popup popup-hidden">
     <div class="popup__content">
         <div class="popup__close">

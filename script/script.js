@@ -24,6 +24,8 @@ function callInit() {
     })
 
     popupClose.addEventListener('click', closePopup)
+
+    setTimeout(openPopup, 120_000)
 }
 function dropListInit() {
     const dropItems = document.querySelectorAll('.objects__item')
@@ -155,12 +157,12 @@ function formInit() {
 function rangeSlidersInit() {
     const rangeBlocks = document.querySelectorAll('[data-range-block]')
     const paymentTypes = document.querySelectorAll('[data-tab-content]')
-    const scheduleButton = document.querySelector('#payment-schedule')
-    const body = document.querySelector('body')
-    const scheduleSection = document.querySelector('.schedule')
-    const scheduleExit = document.querySelector('.schedule__exit')
-    const scheduleList = document.querySelector('.schedule__list')
-    const scheduleFooter = document.querySelector('.schedule__footer')
+    // const scheduleButton = document.querySelector('#payment-schedule')
+    // const body = document.querySelector('body')
+    // const scheduleSection = document.querySelector('.schedule')
+    // const scheduleExit = document.querySelector('.schedule__exit')
+    // const scheduleList = document.querySelector('.schedule__list')
+    // const scheduleFooter = document.querySelector('.schedule__footer')
 
     // сумма кредита
     const currentSum = document.querySelector('#current-sum-value')
@@ -193,16 +195,16 @@ function rangeSlidersInit() {
 
     // variables
     let currentPaymentType = 'credit'
-    const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
-    const paymentInfo = {
-        dates: [],
-        summs: [],
-        mainSumms: [],
-        percentSumms: [],
-        finalSum: 0,
-        mainFinalSum: 0,
-        percentFianlSum: 0
-    }
+    // const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+    // const paymentInfo = {
+    //     dates: [],
+    //     summs: [],
+    //     mainSumms: [],
+    //     percentSumms: [],
+    //     finalSum: 0,
+    //     mainFinalSum: 0,
+    //     percentFianlSum: 0
+    // }
 
     // change payment type hanbdler
     paymentTypes.forEach(type => {
@@ -252,90 +254,90 @@ function rangeSlidersInit() {
         }
     }
 
-    const loadData = () => {
-        paymentInfo.dates = []
-        paymentInfo.summs = []
-        paymentInfo.mainSumms = []
-        paymentInfo.percentSumms = []
-        paymentInfo.finalSum = 0
-        paymentInfo.mainFinalSum = 0
-        paymentInfo.percentFianlSum = 0
+    // const loadData = () => {
+    //     paymentInfo.dates = []
+    //     paymentInfo.summs = []
+    //     paymentInfo.mainSumms = []
+    //     paymentInfo.percentSumms = []
+    //     paymentInfo.finalSum = 0
+    //     paymentInfo.mainFinalSum = 0
+    //     paymentInfo.percentFianlSum = 0
 
-        if (currentPaymentType === "credit") {
-            resultSum.textContent = rusNumber(sumSlider.value)
-            const percentSum = sumSlider.value * 0.18
-            const everyMonthPayment = rounded(percentSum / monthSlider.value)
-            everyMonthPaymentElement.textContent = rusNumber(everyMonthPayment)
-            const date = new Date()
-            let curMonth = date.getMonth()
-            let curYear = date.getFullYear()
-            for (let i = 0; i < monthSlider.value; i++) {
-                paymentInfo.summs.push(everyMonthPayment)
-                paymentInfo.mainSumms.push(0)
-                paymentInfo.percentSumms.push(everyMonthPayment)
-                paymentInfo.dates.push(`${months[curMonth]} ${curYear}`)
-                curMonth++
-                if (curMonth === 12) {
-                    curMonth = 0
-                    curYear++
-                }
-            }
-            paymentInfo.summs[paymentInfo.summs.length - 1] += +sumSlider.value
-            paymentInfo.mainSumms[paymentInfo.mainSumms.length - 1] = +sumSlider.value
-            paymentInfo.finalSum = +sumSlider.value + percentSum
-            paymentInfo.mainFinalSum = +sumSlider.value
-            paymentInfo.percentFianlSum = percentSum
-        } else {
-            everyMonthPaymentElement.textContent = sumSliderMonthly.value
-            const sumOnFullTime = rounded(sumSliderMonthly.value * monthSlider.value / 0.18)
-            resultSum.textContent = rusNumber(sumOnFullTime)
-            const date = new Date()
-            let curMonth = date.getMonth()
-            let curYear = date.getFullYear()
-            for (let i = 0; i < monthSlider.value; i++) {
-                paymentInfo.summs.push(+sumSliderMonthly.value)
-                paymentInfo.mainSumms.push(0)
-                paymentInfo.percentSumms.push(+sumSliderMonthly.value)
-                paymentInfo.dates.push(`${months[curMonth]} ${curYear}`)
-                curMonth++
-                if (curMonth === 12) {
-                    curMonth = 0
-                    curYear++
-                }
-            }
-            paymentInfo.summs[paymentInfo.summs.length - 1] += sumOnFullTime
-            paymentInfo.mainSumms[paymentInfo.mainSumms.length - 1] = sumOnFullTime
-            paymentInfo.finalSum = sumOnFullTime + monthSlider.value * sumSliderMonthly.value
-            paymentInfo.mainFinalSum = sumOnFullTime
-            paymentInfo.percentFianlSum = monthSlider.value * sumSliderMonthly.value
-        }
-    }
+    //     if (currentPaymentType === "credit") {
+    //         resultSum.textContent = rusNumber(sumSlider.value)
+    //         const percentSum = sumSlider.value * 0.18
+    //         const everyMonthPayment = rounded(percentSum / monthSlider.value)
+    //         everyMonthPaymentElement.textContent = rusNumber(everyMonthPayment)
+    //         const date = new Date()
+    //         let curMonth = date.getMonth()
+    //         let curYear = date.getFullYear()
+    //         for (let i = 0; i < monthSlider.value; i++) {
+    //             paymentInfo.summs.push(everyMonthPayment)
+    //             paymentInfo.mainSumms.push(0)
+    //             paymentInfo.percentSumms.push(everyMonthPayment)
+    //             paymentInfo.dates.push(`${months[curMonth]} ${curYear}`)
+    //             curMonth++
+    //             if (curMonth === 12) {
+    //                 curMonth = 0
+    //                 curYear++
+    //             }
+    //         }
+    //         paymentInfo.summs[paymentInfo.summs.length - 1] += +sumSlider.value
+    //         paymentInfo.mainSumms[paymentInfo.mainSumms.length - 1] = +sumSlider.value
+    //         paymentInfo.finalSum = +sumSlider.value + percentSum
+    //         paymentInfo.mainFinalSum = +sumSlider.value
+    //         paymentInfo.percentFianlSum = percentSum
+    //     } else {
+    //         everyMonthPaymentElement.textContent = sumSliderMonthly.value
+    //         const sumOnFullTime = rounded(sumSliderMonthly.value * monthSlider.value / 0.18)
+    //         resultSum.textContent = rusNumber(sumOnFullTime)
+    //         const date = new Date()
+    //         let curMonth = date.getMonth()
+    //         let curYear = date.getFullYear()
+    //         for (let i = 0; i < monthSlider.value; i++) {
+    //             paymentInfo.summs.push(+sumSliderMonthly.value)
+    //             paymentInfo.mainSumms.push(0)
+    //             paymentInfo.percentSumms.push(+sumSliderMonthly.value)
+    //             paymentInfo.dates.push(`${months[curMonth]} ${curYear}`)
+    //             curMonth++
+    //             if (curMonth === 12) {
+    //                 curMonth = 0
+    //                 curYear++
+    //             }
+    //         }
+    //         paymentInfo.summs[paymentInfo.summs.length - 1] += sumOnFullTime
+    //         paymentInfo.mainSumms[paymentInfo.mainSumms.length - 1] = sumOnFullTime
+    //         paymentInfo.finalSum = sumOnFullTime + monthSlider.value * sumSliderMonthly.value
+    //         paymentInfo.mainFinalSum = sumOnFullTime
+    //         paymentInfo.percentFianlSum = monthSlider.value * sumSliderMonthly.value
+    //     }
+    // }
 
     const rusNumber = (number) => {
         return (number / 1).toLocaleString('ru-RU')
     }
 
-    const fiilPaymentSchedule = () => {
-        scheduleList.innerHTML = ''
-        for (let i = 0; i < paymentInfo.dates.length; i++) {
-            scheduleList.innerHTML += `
-            <ul class="schedule__row">
-                <li class="schedule__item">${i + 1}</li>
-                <li class="schedule__item">${paymentInfo.dates[i]}</li>
-                <li class="schedule__item">${rusNumber(rounded(paymentInfo.summs[i]))}</li>
-                <li class="schedule__item">${rusNumber(rounded(paymentInfo.mainSumms[i]))}</li>
-                <li class="schedule__item">${rusNumber(rounded(paymentInfo.percentSumms[i]))}</li>
-            </ul>
-            `
-        }
-        scheduleFooter.children[1].textContent = rusNumber(rounded(paymentInfo.finalSum))
-        scheduleFooter.children[2].textContent = rusNumber(rounded(paymentInfo.mainFinalSum))
-        scheduleFooter.children[3].textContent = rusNumber(rounded(paymentInfo.percentFianlSum))
-    }
+    // const fiilPaymentSchedule = () => {
+    //     scheduleList.innerHTML = ''
+    //     for (let i = 0; i < paymentInfo.dates.length; i++) {
+    //         scheduleList.innerHTML += `
+    //         <ul class="schedule__row">
+    //             <li class="schedule__item">${i + 1}</li>
+    //             <li class="schedule__item">${paymentInfo.dates[i]}</li>
+    //             <li class="schedule__item">${rusNumber(rounded(paymentInfo.summs[i]))}</li>
+    //             <li class="schedule__item">${rusNumber(rounded(paymentInfo.mainSumms[i]))}</li>
+    //             <li class="schedule__item">${rusNumber(rounded(paymentInfo.percentSumms[i]))}</li>
+    //         </ul>
+    //         `
+    //     }
+    //     scheduleFooter.children[1].textContent = rusNumber(rounded(paymentInfo.finalSum))
+    //     scheduleFooter.children[2].textContent = rusNumber(rounded(paymentInfo.mainFinalSum))
+    //     scheduleFooter.children[3].textContent = rusNumber(rounded(paymentInfo.percentFianlSum))
+    // }
 
     // sum credit slider
     const sumSliderHandler = () => {
-        lineSliderHandler(sumSlider, sumSliderLine, 80_000_000)
+        lineSliderHandler(sumSlider, sumSliderLine, 40_000_000)
         digitSliderHandler(currentSum, sumSlider.value)
         digitSliderHandler(resultSum, sumSlider.value)
         createPaymentScheduleInfo()
@@ -363,22 +365,22 @@ function rangeSlidersInit() {
     sumSliderMonthly.addEventListener('change', sumSliderMonthlyPayment)
     monthSlider.addEventListener('input', monthSliderHandler)
     monthSlider.addEventListener('change', monthSliderHandler)
-    scheduleButton.addEventListener('click', () => {
-        loadData()
-        fiilPaymentSchedule()
-        body.classList.add('body-lock')
-        scheduleSection.classList.remove('schedule-closed')
-    })
-    scheduleExit.addEventListener('click', () => {
-        body.classList.remove('body-lock')
-        scheduleSection.classList.add('schedule-closed')
-    })
+    // scheduleButton.addEventListener('click', () => {
+    //     loadData()
+    //     fiilPaymentSchedule()
+    //     body.classList.add('body-lock')
+    //     scheduleSection.classList.remove('schedule-closed')
+    // })
+    // scheduleExit.addEventListener('click', () => {
+    //     body.classList.remove('body-lock')
+    //     scheduleSection.classList.add('schedule-closed')
+    // })
 
     createPaymentScheduleInfo()
     
     lineSliderHandler(sumSliderMonthly, sumSliderLineMonthly, 1_000_000)
     lineSliderHandler(monthSlider, monthSliderLine, 120)
-    lineSliderHandler(sumSlider, sumSliderLine, 100_000_000)
+    lineSliderHandler(sumSlider, sumSliderLine, 40_000_000)
 
     // input.addEventListener('input', () => {
     //     const regExp = /[^0-9]/g
