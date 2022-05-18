@@ -25,7 +25,10 @@ function callInit() {
 
     popupClose.addEventListener('click', closePopup)
 
-    setTimeout(openPopup, 120_000)
+    setTimeout(() => {
+        openPopup()
+        setTimeout(openPopup, 120_000)
+    }, 15_000)
 }
 function dropListInit() {
     const dropItems = document.querySelectorAll('.objects__item')

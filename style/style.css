@@ -2327,9 +2327,25 @@ img {
 }
 
 .swiper-sum {
-  text-align: center;
+  text-align: left;
   color: #B68300;
+}
+
+.swiper-sum__wrap {
   margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.swiper-sum__wrap img {
+  width: 110px;
 }
 
 .footer {
@@ -3196,6 +3212,10 @@ img {
     font-size: 18px;
   }
 
+  .swiper-sum__wrap img {
+    width: 100px;
+  }
+
   .footer__title {
     font-size: 24px;
     line-height: 29px;
@@ -3930,6 +3950,10 @@ img {
 
   .swiper-btns div:hover {
     background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .swiper-sum__wrap img {
+    width: 90px;
   }
 
   .footer__container {
@@ -4842,6 +4866,10 @@ img {
 
   .swiper-slide {
     padding: 12px;
+  }
+
+  .swiper-sum__wrap img {
+    width: 80px;
   }
 
   .footer__container {
