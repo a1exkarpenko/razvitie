@@ -403,6 +403,9 @@ document.addEventListener('DOMContentLoaded', () => {
     rangeSlidersInit()
     swiperInit()
     callInit()
+
+    const footerRights = document.querySelector('.footer__rights')
+    footerRights.textContent = `© ${new Date().getFullYear()} Appmax All Rights Reserved.`
 })
 function swiperInit() {
     const swiper = new Swiper('.swiper', {

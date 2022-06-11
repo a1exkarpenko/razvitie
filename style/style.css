@@ -168,6 +168,105 @@ img {
   }
 }
 
+.s-call {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 40;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.s-call svg {
+  width: 100%;
+  height: 100%;
+  z-index: 43;
+  position: relative;
+}
+
+.s-call__back {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.s-call__back.gold {
+  background-color: #B68300;
+  -webkit-animation: phone 1.5s infinite;
+          animation: phone 1.5s infinite;
+}
+
+.s-call__back.black {
+  width: 95%;
+  height: 95%;
+  background-color: #1E292D;
+}
+
+@-webkit-keyframes phone {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    width: 150%;
+    height: 150%;
+    opacity: 0;
+  }
+}
+
+@keyframes phone {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    width: 150%;
+    height: 150%;
+    opacity: 0;
+  }
+}
+
+.policy__container {
+  margin: 50px auto;
+}
+
+.policy__title {
+  padding: 8px 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.policy__text {
+  padding: 6px 0;
+  font-size: 16px;
+}
+
+.policy__page-title {
+  margin: 25px 0;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
 .header {
   width: 100%;
   min-height: 1080px;
@@ -2700,6 +2799,14 @@ img {
     padding: 0 40px;
   }
 
+  .policy__container {
+    margin: 40px auto;
+  }
+
+  .policy__page-title {
+    font-size: 20px;
+  }
+
   .header {
     min-height: 808px;
   }
@@ -3291,6 +3398,25 @@ img {
   .container {
     max-width: 592px;
     padding: 0 20px;
+  }
+
+  .policy__container {
+    margin: 30px auto;
+  }
+
+  .policy__title {
+    padding: 7px 0;
+    font-size: 16px;
+  }
+
+  .policy__text {
+    padding: 5px 0;
+    font-size: 14px;
+  }
+
+  .policy__page-title {
+    margin: 15px 0;
+    font-size: 18px;
   }
 
   .header {

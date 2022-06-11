@@ -10,8 +10,8 @@
     $mail->setLanguage('ru', 'phpmailer/language/');
     $mail->isHTML(true);
 
-    $mail->setFrom('from@example.com', 'razvitie');
-    $mail->addAddress('from@example.com', 'razvitie');
+    $mail->setFrom('busines0@yandex.ru', 'razvitie');
+    $mail->addAddress('busines0@yandex.ru', 'razvitie');
     $mail->Subject = 'Message';
 
     $body = "";
