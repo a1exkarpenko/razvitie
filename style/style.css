@@ -2799,6 +2799,13 @@ img {
     padding: 0 40px;
   }
 
+  .s-call {
+    bottom: 40px;
+    right: 40px;
+    width: 45px;
+    height: 45px;
+  }
+
   .policy__container {
     margin: 40px auto;
   }
@@ -3398,6 +3405,11 @@ img {
   .container {
     max-width: 592px;
     padding: 0 20px;
+  }
+
+  .s-call {
+    bottom: 30px;
+    right: 30px;
   }
 
   .policy__container {
@@ -4490,6 +4502,11 @@ img {
 @media screen and (max-width: 592px) {
   .container {
     max-width: 320px;
+  }
+
+  .s-call {
+    bottom: 20px;
+    right: 20px;
   }
 
   .cards {
